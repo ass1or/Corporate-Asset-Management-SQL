@@ -49,16 +49,3 @@ The system design is inspired by real-world enterprise IT asset and identity man
 All data, names, and identifiers used in this repository are fictional and anonymized.
 
 The goal of the project was to bridge academic database design with practical security, auditability, and IAM-oriented thinking used in real organizations.
-
-
-
-
-
-
-
-## How to Run
-1.Clone the repository.
-
-2. Import corporate_assets.sql into your MySQL server.
-
-3. Run the test procedures located at the bottom of the SQL file to simulate employee hiring/firing.
