@@ -13,19 +13,20 @@ As an aspiring Security Engineer, I designed this database with **Data Integrity
 **Normalization (3NF):** The database follows strict 3rd Normal Form standards to eliminate redundancy and data anomalies, ensuring a "Single Source of Truth".
 **Engine Hardening:** Forced usage of `InnoDB` engine to ensure transaction reliability and row-level locking.
 
-## 🛠️ Tech Stack
+##  Tech Stack
 * **Database:** MySQL
 * **Language:** SQL (DDL, DML, Stored Procedures, Triggers)
 * **Design Tool:** ERD (Entity Relationship Diagram)
 * **Key Concepts:** Normalization (1NF-3NF), ACID, Relational Integrity.
 
-## 📊 Database Schema (ERD)
+##  Database Schema (ERD)
 The system is built on 7 interconnected tables, separating logic for Departments, Employees, Devices, and Software Licenses.
 
 ![Database Diagram](Diagram.png)
+
 *(Entity Relationship Diagram showing 1:1, 1:M, and M:M relationships)*
 
-## ⚙️ Key Features & Code Snippets
+##  Key Features & Code Snippets
 
 ### 1. Automated Onboarding (IAM Simulation)
 A stored procedure that automatically creates an employee profile and assigns an available laptop from the "In Stock" pool, ensuring immediate operational readiness.
@@ -39,7 +40,7 @@ Security-critical procedure. When an employee is terminated, the system automati
 A dynamic view v_leasing_report allows the IT/Finance department to audit monthly costs per cost center.
 
 
-##🚀 How to Run
+🚀 How to Run
 1.Clone the repository.
 
 2. Import corporate_assets.sql into your MySQL server.
