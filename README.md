@@ -43,3 +43,44 @@ BEGIN
     -- 3. Assign Asset
     UPDATE devices SET assigned_emp = v_new_emp_id ...
 END
+
+
+
+
+2. Secure Offboarding (Revoking Access)
+Security-critical procedure. When an employee is terminated, the system automatically reclaims their assets back to the warehouse inventory, preventing equipment loss.
+
+SQL
+
+CREATE PROCEDURE OffboardEmployee(IN p_email VARCHAR(100))
+BEGIN
+    -- Return assets to stock (Revoke physical access)
+    UPDATE devices 
+    SET status = 'In Stock', assigned_emp = NULL 
+    WHERE assigned_emp = v_emp_id;
+
+    -- Remove user identity
+    DELETE FROM employees WHERE emp_id = v_emp_id;
+END
+
+
+
+
+3. Financial Reporting View
+A dynamic view v_leasing_report allows the IT/Finance department to audit monthly costs per cost center.
+
+SQL
+
+CREATE VIEW v_leasing_report AS
+SELECT d.model_name, l.paying_entity, l.monthly_cost_pln
+FROM devices d
+JOIN lease_info l ON d.id = l.device_id;
+
+
+
+🚀 How to Run
+1.Clone the repository.
+
+2. Import corporate_assets.sql into your MySQL server.
+
+3. Run the test procedures located at the bottom of the SQL file to simulate employee hiring/firing.
