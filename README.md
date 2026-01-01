@@ -77,7 +77,7 @@ FROM devices d
 JOIN lease_info l ON d.id = l.device_id;
 
 
-
+---
 🚀 How to Run
 1.Clone the repository.
 
