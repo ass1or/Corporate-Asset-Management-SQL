@@ -40,7 +40,23 @@ Security-critical procedure. When an employee is terminated, the system automati
 A dynamic view v_leasing_report allows the IT/Finance department to audit monthly costs per cost center.
 
 
-🚀 How to Run
+
+## Academic & Professional Context
+
+This database was developed as part of an academic course project, where it received the highest possible grade (5/5).
+
+The system design is inspired by real-world enterprise IT asset and identity management processes observed in a corporate environment where I currently work.  
+All data, names, and identifiers used in this repository are fictional and anonymized.
+
+The goal of the project was to bridge academic database design with practical security, auditability, and IAM-oriented thinking used in real organizations.
+
+
+
+
+
+
+
+## How to Run
 1.Clone the repository.
 
 2. Import corporate_assets.sql into your MySQL server.
